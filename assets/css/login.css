@@ -1,0 +1,56 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/login_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* 登录注册 */
+.logAndRegBox {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 400px;
+    height: 310px;
+    background-color: #fff;
+    /* 移动自身宽高的50% */
+    transform: translate(-50%, -50%);
+}
+
+.title {
+    height: 60px;
+    background-image: url('../images/login_title.png');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.registerBox {
+    display: none;
+}
+
+.layui-form {
+    padding: 0 30px;
+}
+
+.aLink {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.layui-form-item {
+    position: relative;
+}
+
+.layui-form-item i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.layui-form-item .layui-input {
+    padding-left: 35px;
+}
