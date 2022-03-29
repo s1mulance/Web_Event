@@ -34,7 +34,7 @@ $(function(){
     $('#registerForm').on('submit', function(e) {
         e.preventDefault()//防止自动跳转
         $.ajax({
-            type: 'POST',
+            method: 'POST',
             url: '/api/reguser',
             data: { 
                 username: $('#registerForm [name="username"]').val(),
@@ -51,15 +51,16 @@ $(function(){
     $('#loginForm').on('submit', function(e) {
         e.preventDefault()
         $.ajax({
-            type: 'POST',
+            method: 'POST',
             url: '/api/login',
+            //获取表单数据
             data: $(this).serialize(),
             success: function(res) {
                 if(res.status !== 0) return layer.msg('登录失败')
                 layer.msg('登陆成功')
+                localStorage.setItem('token', res.token)
                 //href 属性是一个可读可写的字符串，可设置或返回当前显示的文档的完整 URL
                 location.href = '/index.html'//跳转到首页
-                localStorage.setItem('token', res.token)
             }
         })
     })
