@@ -49,7 +49,7 @@ function getUserInfo() {
 //渲染用户信息
 function renderAvatar(user) {
     //渲染用户名
-    let name = user.username || user.nickname
+    let name = user.nickname || user.username
     $('#welcome').html('欢迎&nbsp;&nbsp;' + name)
     //渲染头像
     //判断用户是否有user_pic
